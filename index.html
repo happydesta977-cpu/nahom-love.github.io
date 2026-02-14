@@ -222,6 +222,19 @@ function startSite() {
     document.getElementById("intro").style.display = "none";
     document.querySelector("audio").play();
 }
+setInterval(() => {
+    let heart = document.createElement("div");
+    heart.innerHTML = "💗";
+    heart.style.position = "fixed";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.bottom = "-20px";
+    heart.style.fontSize = (Math.random()*15 + 15) + "px";
+    heart.style.opacity = 0.6;
+    heart.style.animation = "float 6s linear";
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),6000);
+}, 1200);
+
 </script>
 </body>
 </html>
