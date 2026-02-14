@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Kukaye 💖</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to bottom right, #fff0f5, #ffe6f0);
+    text-align: center;
+    color: #5c2a3c;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 60px 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1.2s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1 {
+    font-size: 3em;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #ff4d88;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #e6005c;
+}
+
+.heart {
+    position: fixed;
+    color: #ff4d88;
+    animation: float 4s linear infinite;
+}
+
+@keyframes float {
+    from { transform: translateY(100vh); opacity: 1; }
+    to { transform: translateY(-10vh); opacity: 0; }
+}
+
+.gallery img {
+    width: 250px;
+    margin: 10px;
+    border-radius: 15px;
+}
+</style>
+</head>
+<body>
+
+<audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_115b9e1c21.mp3?filename=romantic-piano-110397.mp3" type="audio/mp3">
+</audio>
+
+<section>
+    <h1>Kukaye...</h1>
+    <p>There are many things I could say today. But I want this to be real.</p>
+</section>
+
+<section>
+    <h2>Our Beginning</h2>
+    <p>
+        We met in church. Not randomly.  
+        As young adults ministry leaders.  
+        God placed us in the same space, serving Him.
+        <br><br>
+        Before I even knew you deeply,  
+        you respected me.  
+        You appreciated me.  
+        You listened to me.  
+        You made me feel accepted.
+        <br><br>
+        That feeling... changed something in me.
+    </p>
+</section>
+
+<section>
+    <h2>The Moment That Meant Everything</h2>
+    <p>
+        The day you came back and asked to build again...
+        I don’t think you fully understand what that did to my heart.
+        <br><br>
+        It takes strength for a woman to rethink, reflect, and choose again.
+        You didn’t act from pride.
+        You acted from sincerity.
+        <br><br>
+        That moment made me respect you even more.
+        It showed me your depth.
+        Your courage.
+        Your heart.
+        <br><br>
+        That was one of the most beautiful moments of my life.
+    </p>
+</section>
+
+<section>
+    <h2>Why I Love You</h2>
+    <p>
+        1️⃣ The way you accepted me before fully knowing me.
+        You gave me comfort like it was natural for you.
+        <br><br>
+        2️⃣ Your clean heart.
+        You look strong and independent on the outside,
+        but inside you are soft, compassionate, and deeply beautiful.
+        <br><br>
+        3️⃣ Loving you became more than feelings.
+        It became clarity.
+        My mind, my heart, my eyes — they all agreed.
+        <br><br>
+        And yes… you are gorgeous.
+        Your smile.
+        Your hair.
+        Your face.
+        Your everything.
+        <br><br>
+        Even your wide nails that make me laugh every time 😌
+    </p>
+</section>
+
+<section>
+    <h2>You Are My Person</h2>
+    <p>
+        I know sometimes you feel like you are not fully understood.
+        And I want you to know — I am learning.
+        I am growing.
+        I am trying to understand you deeper.
+        <br><br>
+        You are patient with me.
+        You stay.
+        You trust.
+        <br><br>
+        I see that.
+        And I don’t take it lightly.
+        <br><br>
+        You are graduating soon.
+        A medical physics queen.
+        A singer with an angelic voice.
+        A playful, crazy, beautiful soul.
+        <br><br>
+        And through everything,
+        I know one thing clearly —
+        I love you from the bottom of my heart.
+        <br><br>
+        Not exaggerated.
+        Not dramatic.
+        Just real.
+    </p>
+</section>
+
+<section>
+    <h2>Will You Keep Choosing Me?</h2>
+    <button onclick="showHearts()">Yes, Nahom 💖</button>
+    <p style="margin-top:40px;">From the man you control completely,<br>— Nahom</p>
+</section>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100) {
+            sec.classList.add("show");
+        }
+    });
+});
+
+function showHearts() {
+    for(let i=0;i<30;i++){
+        let heart = document.createElement("div");
+        heart.innerHTML = "💖";
+        heart.className = "heart";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (Math.random()*20 + 20) + "px";
+        heart.style.animationDuration = (Math.random()*3 + 2) + "s";
+        document.body.appendChild(heart);
+        setTimeout(()=>heart.remove(),4000);
+    }
+}
+</script>
+
+</body>
+</html>
